@@ -13,7 +13,7 @@ const formatResultObject = (resultObject) => {
     };
 };
 
-const getResponse = (json) => {
+const formatReponse = (json) => {
     const response = json.reduce((accumulator, currentObject) => {
         if (currentObject.Topics) {
             const formatedTopicsObject = currentObject.Topics.map(x => formatResultObject(x));
@@ -26,5 +26,5 @@ const getResponse = (json) => {
 };
 
 module.exports = {
-    getResponse
+    formatReponse
 };
