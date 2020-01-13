@@ -1,11 +1,12 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
+const helmet = require('helmet');
 const { getSearchResults } = require('./services/duckduckgo/duckduckgo');
 const { getResponse } = require('./bll/response');
 
 const app = express();
 const port = 3000;
 
+app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
