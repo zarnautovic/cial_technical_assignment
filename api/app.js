@@ -19,7 +19,7 @@ app.get('/search', async (req, res) => {
     const { searchParam } = req.query;
     const result = await getSearchResults(searchParam);
     const response = getResponse(result);
-    res.send(response);
+    res.json(response);
   } catch (error) {
     console.log(error);
   }
@@ -31,7 +31,7 @@ app.post('/search', async (req, res) => {
     const { searchParam } = req.body;
     const result = await getSearchResults(searchParam);
     const response = getResponse(result);
-    res.send(response);
+    res.json(response);
   } catch (error) {
     console.log(error);
   }
