@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     searchResult: [],
     searchParam: '',
-    searchHistory:[]
+    searchHistory: []
   };
 
   searchData = () => {
