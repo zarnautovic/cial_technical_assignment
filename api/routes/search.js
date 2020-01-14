@@ -1,28 +1,33 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const { getSearchResults } = require('../services/duckduckgo/duckduckgo');
 const { formatReponse } = require('../bll/formatResponse');
+const { validateSearchParam } = require('../bll/validation');
+const { ErrorHandler } = require('../helpers/error');
 
-router.get('/search', async (req, res) => {
+
+router.get('/search', async (req, res, next) => {
     try {
       const { searchParam } = req.query;
+      validateSearchParam(searchParam);
       const result = await getSearchResults(searchParam);
       const response = formatReponse(result);
       res.json(response);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
 });
 
 router.post('/search', async (req, res) => {
     try {
       const { searchParam } = req.body;
+      validateSearchParam(searchParam);
       const result = await getSearchResults(searchParam);
       const response = formatReponse(result);
       res.json(response);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   });
   

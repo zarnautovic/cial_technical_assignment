@@ -26,5 +26,7 @@ const formatReponse = (json) => {
 };
 
 module.exports = {
-    formatReponse
+    formatReponse,
+    getTitleFromResult,
+    formatResultObject
 };

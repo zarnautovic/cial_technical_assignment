@@ -4,7 +4,7 @@ const url = 'http://api.duckduckgo.com/';
 const format = 'json';
 
 const buildUrl = (searchParam) => {
-  const url2 = `${url}/?q=${searchParam}&format=${format}`;
+  const url2 = `${url}?q=${searchParam}&format=${format}`;
   return url2;
 };
 
@@ -20,5 +20,6 @@ const getSearchResults = async (searchParam) => {
 };
 
 module.exports = {
-  getSearchResults
+  getSearchResults,
+  buildUrl
 };

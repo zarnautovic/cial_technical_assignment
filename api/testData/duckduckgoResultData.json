@@ -1,0 +1,109 @@
+[{
+    "Text": "Google An American multinational technology company that specializes in Internet-related services...",
+    "Result": "<a href=\"https://duckduckgo.com/Google\">Google</a> An American multinational technology company that specializes in Internet-related services...",
+    "FirstURL": "https://duckduckgo.com/Google",
+    "Icon": {
+        "URL": "https://duckduckgo.com/i/8f85c93f.png",
+        "Width": "",
+        "Height": ""
+    }
+}, {
+    "Icon": {
+        "Width": "",
+        "Height": "",
+        "URL": "https://duckduckgo.com/i/8f85c93f.png"
+    },
+    "FirstURL": "https://duckduckgo.com/Google_Search",
+    "Result": "<a href=\"https://duckduckgo.com/Google_Search\">Google Search</a>A web search engine developed by Google.",
+    "Text": "Google Search A web search engine developed by Google."
+}, {
+    "Icon": {
+        "URL": "https://duckduckgo.com/i/82de7b2a.jpg",
+        "Width": "",
+        "Height": ""
+    },
+    "Text": "Goggles Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the...",
+    "Result": "<a href=\"https://duckduckgo.com/Goggles\">Goggles</a>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the...",
+    "FirstURL": "https://duckduckgo.com/Goggles"
+}, {
+    "Topics": [{
+        "Icon": {
+            "Height": "",
+            "Width": "",
+            "URL": ""
+        },
+        "Text": "Google (verb) As a result of the increasing popularity and dominance of the Google search engine, usage of the...",
+        "FirstURL": "https://duckduckgo.com/Google_(verb)",
+        "Result": "<a href=\"https://duckduckgo.com/Google_(verb)\">Google (verb)</a>As a result of the increasing popularity and dominance of the Google search engine, usage of the..."
+    }, {
+        "Result": "<a href=\"https://duckduckgo.com/Google.org\">Google.org</a>Google.org, founded in October 2005, is the charitable arm of Google, a multinational technology...",
+        "FirstURL": "https://duckduckgo.com/Google.org",
+        "Text": "Google.org Google.org, founded in October 2005, is the charitable arm of Google, a multinational technology...",
+        "Icon": {
+            "URL": "https://duckduckgo.com/i/a707b7ea.png",
+            "Height": "",
+            "Width": ""
+        }
+    }],
+    "Name": "Google LLC"
+}, {
+    "Topics": [{
+        "Text": "Googal, Devadurga A village in the Devadurga taluk of Raichur district in Karnataka state, India.",
+        "FirstURL": "https://duckduckgo.com/Googal%2C_Devadurga",
+        "Result": "<a href=\"https://duckduckgo.com/Googal%2C_Devadurga\">Googal, Devadurga</a>A village in the Devadurga taluk of Raichur district in Karnataka state, India.",
+        "Icon": {
+            "Width": "",
+            "Height": "",
+            "URL": ""
+        }
+    }],
+    "Name": "Places"
+}, {
+    "Name": "See also",
+    "Topics": [{
+        "Icon": {
+            "Width": "",
+            "Height": "",
+            "URL": "https://duckduckgo.com/i/d291493f.jpeg"
+        },
+        "Result": "<a href=\"https://duckduckgo.com/Goggles!\">Goggles!</a> Goggles! is a 1969 children's picture book by American author and illustrator Ezra Jack Keats...",
+        "FirstURL": "https://duckduckgo.com/Goggles!",
+        "Text": "Goggles! Goggles! is a 1969 children's picture book by American author and illustrator Ezra Jack Keats..."
+    }, {
+        "Icon": {
+            "Width": "",
+            "Height": "",
+            "URL": ""
+        },
+        "Text": "Googly A type of deceptive delivery bowled by a right-arm leg spin bowler.",
+        "FirstURL": "https://duckduckgo.com/Googly",
+        "Result": "<a href=\"https://duckduckgo.com/Googly\">Googly</a>A type of deceptive delivery bowled by a right-arm leg spin bowler."
+    }, {
+        "FirstURL": "https://duckduckgo.com/Googly_eyes",
+        "Result": "<a href=\"https://duckduckgo.com/Googly_eyes\">Googly eyes</a>Googly eyes, or jiggly eyes, are small plastic craft supplies used to imitate eyeballs.",
+        "Text": "Googly eyes Googly eyes, or jiggly eyes, are small plastic craft supplies used to imitate eyeballs.",
+        "Icon": {
+            "Width": "",
+            "Height": "",
+            "URL": "https://duckduckgo.com/i/cf399a0e.jpg"
+        }
+    }, {
+        "Text": "Googol The large number 10100.",
+        "FirstURL": "https://duckduckgo.com/Googol",
+        "Result": "<a href=\"https://duckduckgo.com/Googol\">Googol</a>The large number 10100.",
+        "Icon": {
+            "Width": "",
+            "Height": "",
+            "URL": ""
+        }
+    }, {
+        "Text": "Gogol Meanings See related meanings for the word 'Gogol'.",
+        "FirstURL": "https://duckduckgo.com/d/Gogol",
+        "Result": "<a href=\"https://duckduckgo.com/d/Gogol\">Gogol Meanings</a>  See related meanings for the word 'Gogol'.",
+        "Icon": {
+            "Width": "",
+            "Height": "",
+            "URL": ""
+        }
+    }]
+}]
