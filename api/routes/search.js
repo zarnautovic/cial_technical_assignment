@@ -19,7 +19,7 @@ router.get('/search', async (req, res, next) => {
     }
 });
 
-router.post('/search', async (req, res) => {
+router.post('/search', async (req, res, next) => {
     try {
       const { searchParam } = req.body;
       validateSearchParam(searchParam);

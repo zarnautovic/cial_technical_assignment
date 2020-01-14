@@ -6,7 +6,6 @@ const searchRouter = require('./routes/search');
 const { handleError } = require('./helpers/error');
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
@@ -19,5 +18,4 @@ app.use((err, req, res, next) => {
     handleError(err, res);
 });
 
-app.listen(port);
-console.log('The server is listening on port 3000');
+module.exports = app;
