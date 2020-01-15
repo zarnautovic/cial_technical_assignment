@@ -1,9 +1,9 @@
 import React from 'react';
 
 import './Sidebar.css';
+import HistoryItem from '../HistoryItem/HistoryItem'; 
 
 const sidebar = (props) => {
-    console.log(props);
 
     let previousSearches = null;
 
@@ -11,7 +11,10 @@ const sidebar = (props) => {
         previousSearches = (
             <div>
             {props.previousSearches.map((previousSearch, index) => {
-              return <p key={index}>{previousSearch}</p>
+              return <HistoryItem
+                historySearch={previousSearch}
+                key={index}
+              />
             })}
           </div>
         );
