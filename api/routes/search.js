@@ -26,6 +26,7 @@ router.post('/search', async (req, res, next) => {
       const { searchParam } = req.body;
       validateSearchParam(searchParam);
       const result = await getSearchResults(searchParam);
+      await saveToFile(searchParam);
       const response = formatReponse(result);
       res.json(response);
     } catch (error) {

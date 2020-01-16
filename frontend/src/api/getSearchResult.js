@@ -1,21 +1,23 @@
 import axios from 'axios';
 
+import * as settings from '../settings';
+
 export const searchResultWithGet = async (searchTerm) => {
     try {
-        const response = await axios.get(`http://localhost:8080/search?searchParam=${searchTerm}`)
+        const response = await axios.get(`${settings.API_URL}/search?searchParam=${searchTerm}`)
         return response.data;   
     } catch (error) {
-        return error;
+        throw error;
     }
 };
 
 export const searchResultWithPost = async (searchTerm) => {
     try {
-        const response = await axios.post('http://localhost:8080/search', {
+        const response = await axios.post(`${settings.API_URL}/search`, {
         searchParam: searchTerm
     });
     return response.data;
     } catch (error) {
-        return error;
+        throw error;
     }
 };

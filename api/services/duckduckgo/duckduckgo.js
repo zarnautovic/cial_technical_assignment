@@ -15,7 +15,7 @@ const getSearchResults = async (searchParam) => {
     return searchResult.data.RelatedTopics;
   } catch (error) {
     console.log(error);
-    return error;
+    throw error;
   }
 };
 

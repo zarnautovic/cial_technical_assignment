@@ -4,13 +4,12 @@ import { connect } from 'react-redux';
 import ListItem from '../../components/SearchItem/SearchItem';
 import Search from '../Search/Search';
 import Sidebar from '../Sidebar/Sidebar';
-import { storeResponse, saveSearchParam } from '../../store/actions/actions';
+import { storeResponse } from '../../store/actions/actions';
 
 class App extends Component {
 
-    searchTerm = (searchParam) => {
-      this.props.onSearch(searchParam);
-      this.props.onSaveSearchTerm(searchParam);
+    searchTerm = (searchParam, searchWithPost) => {
+      this.props.onSearch(searchParam, searchWithPost);
     }
   
     render() {
@@ -31,6 +30,7 @@ class App extends Component {
       return (
         <div className="App">
           <h1> Cial technical assignement.</h1>
+          {this.props.error? <p>{this.props.error.message}</p> : ''}
           <Search
             search={this.searchTerm}
           />
@@ -44,14 +44,14 @@ class App extends Component {
   const mapStateToProps = state => {
     return {
       searchResult: state.search.searchResult,
-      searchHistory: state.history.searchHistory
+      searchHistory: state.history.searchHistory,
+      error: state.search.error
     };
   };
   
   const mapDispatchToProps = dispatch => {
     return {
-      onSearch: (searchParam) => dispatch(storeResponse(searchParam)),
-      onSaveSearchTerm: (searchParam) => dispatch(saveSearchParam(searchParam))
+      onSearch: (searchParam, searchWithPost) => dispatch(storeResponse(searchParam, searchWithPost)),
     };
   };
   
