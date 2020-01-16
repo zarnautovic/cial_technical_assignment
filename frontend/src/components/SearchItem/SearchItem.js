@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ListItem.css';
+import './SearchItem.css';
 
 const listItem = ( props ) => {
     return (

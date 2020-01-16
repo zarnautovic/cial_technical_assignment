@@ -5,7 +5,7 @@ import './HistoryItem.css';
 const historyItem = ( props ) => {
     return (
         <div className="HistoryItem">
-            <p>{props.historySearch}</p>
+            <p onClick={() => props.click(props.historySearch)}>{props.historySearch}</p>
         </div>
     );
 };
