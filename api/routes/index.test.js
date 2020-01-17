@@ -6,7 +6,7 @@ describe('testing superset with index get endpoint', () => {
     it('Get index endpoint', async done => {
         const response = await request.get('/');
         expect(response.status).toBe(200);
-        expect(response.body.message).toBe('This is API forCial Technical Assignment!');
+        expect(response.body.message).toBe('This is API for Cial Technical Assignment!');
         done();
     });
 });
