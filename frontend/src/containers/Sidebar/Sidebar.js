@@ -13,7 +13,7 @@ class Sidebar extends Component {
   }
 
   inputChange = (searchParam) => {
-    this.props.onHistorySearch(searchParam);
+    this.props.onHistorySearch(searchParam, this.props.searchWithPost);
     this.props.onReplaceInput(searchParam);
   }
 
@@ -46,13 +46,14 @@ class Sidebar extends Component {
 
 const mapStateToProps = state => {
   return {
-      searchHistory: state.history.searchHistory
+      searchHistory: state.history.searchHistory,
+      searchWithPost: state.search.searchWithPost
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onHistorySearch: (searchParam) => dispatch(storeResponse(searchParam)),
+    onHistorySearch: (searchParam, searchWithPost) => dispatch(storeResponse(searchParam, searchWithPost)),
     onReplaceInput: (searchParam) => dispatch(searchInputChange(searchParam)),
     onGetHistory: () => dispatch(fetchHistory())
   };

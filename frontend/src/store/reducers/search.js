@@ -3,6 +3,7 @@ import * as actionTypes from '../actions/actions';
 const initialState = {
     searchResult: [],
     searchParam: '',
+    searchWithPost:false,
     error: {}
 }
 
@@ -24,6 +25,12 @@ const reducer = (state = initialState, action) => {
         return {
             ...state,
             error: action.searchResult
+        }
+    }
+    if (action.type === actionTypes.TOOGLE) {
+        return {
+            ...state,
+            searchWithPost: !state.searchWithPost
         }
     }
     return state;

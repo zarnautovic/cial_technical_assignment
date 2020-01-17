@@ -6,7 +6,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
 
-    if (action.type === actionTypes.HISTORY) {
+    if (action.type === actionTypes.SAVE_HISTORY) {
         let history = [ ...state.searchHistory];
         if (history.indexOf(action.searchTerm) === -1) {
             history.push(action.searchTerm)

@@ -2,9 +2,10 @@ import { searchResultWithGet, searchResultWithPost } from '../../api/getSearchRe
 import { getHistory } from '../../api/getHistory';
 
 export const SEARCH = 'SEARCH';
-export const HISTORY = 'HISTORY';
+export const SAVE_HISTORY = 'SAVE_HISTORY';
 export const SEARCH_INPUT = 'SEARCH_INPUT';
 export const GET_HISTORY = 'GET_HISTORY';
+export const TOOGLE = 'TOGGLE';
 export const ERROR = 'ERROR';
 
 export const search = (response, type) => {
@@ -42,7 +43,7 @@ export const storeResponse = (searchParam, searchWithPost) => {
 
 export const saveSearchParam = (searchTerm) => {
     return {
-        type: HISTORY,
+        type: SAVE_HISTORY,
         searchTerm: searchTerm
     }
 };
@@ -67,3 +68,9 @@ export const fetchHistory = () => {
         dispatch(history(response));
     }
 };
+
+export const toggleChange = () => {
+    return {
+        type: TOOGLE
+    }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { searchInputChange } from '../../store/actions/actions';
+import { searchInputChange, toggleChange } from '../../store/actions/actions';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -11,17 +11,13 @@ import './Search.css';
 
 class Search extends Component {
 
-    state = {
-        searchWithPost: false
-    }
-
     inputChange = (event) => {
-        this.props.onInputChange(event.target.value)
+        this.props.onInputChange(event.target.value);
     }
 
     toggle = () => {
-        this.setState({ searchWithPost : !this.state.searchWithPost});
-    };
+        this.props.onToggleChange();
+    }
 
     keyPress(event) {
         if (event.key === 'Enter') {
@@ -31,13 +27,13 @@ class Search extends Component {
 
     search = () => {
         if(this.props.searchParam) {
-            this.props.search(this.props.searchParam, this.state.searchWithPost);
+            this.props.search(this.props.searchParam, this.props.searchWithPost);
         }
     }
 
     handleSubmit = (event) => {
         if(this.props.searchParam) {
-            this.props.search(this.props.searchParam, this.state.searchWithPost);
+            this.props.search(this.props.searchParam, this.props.searchWithPost);
         }
         event.preventDefault();
     }
@@ -50,7 +46,7 @@ class Search extends Component {
                         <FormControlLabel
                             control={
                                 <Switch
-                                    value={this.state.searchWithPost}
+                                    value={this.props.searchWithPost}
                                     onChange={this.toggle}
                                     color="primary"
                                 />
@@ -79,13 +75,15 @@ class Search extends Component {
 
 const mapStateToProps = state => {
     return {
-        searchParam: state.search.searchParam
+        searchParam: state.search.searchParam,
+        searchWithPost: state.search.searchWithPost
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onInputChange: (input) => dispatch(searchInputChange(input))
+        onInputChange: (input) => dispatch(searchInputChange(input)),
+        onToggleChange: () => dispatch(toggleChange())
     };
 };
 
