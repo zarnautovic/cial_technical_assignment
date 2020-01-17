@@ -1,5 +1,4 @@
 import * as actionTypes from '../actions/actions';
-import { getHistory } from '../../api/getHistory';
 
 const initialState = {
     searchHistory: []
@@ -16,7 +15,7 @@ const saveHistory = (state, action) => {
         }
 };
 
-const history = (state, action) => {
+const getHistory = (state, action) => {
     return {
         ...state,
         searchHistory: action.searchHistory
@@ -26,7 +25,8 @@ const history = (state, action) => {
 const reducer = (state = initialState, action) => {
     switch( action.type ) {
         case actionTypes.SAVE_HISTORY : return saveHistory(state, action);
-        case actionTypes.GET_HISTORY: return history(state, action);
+        case actionTypes.GET_HISTORY: return getHistory(state, action);
+        default:
     }
     return state;
 };

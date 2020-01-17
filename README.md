@@ -22,7 +22,7 @@ Open one terminal tab and run next commands.
 ```sh
 $ cd api
 $ npm install
-$ npm run
+$ npm start
 $ npm test
 ```
 Backend will start on localhost port 8080.
@@ -31,7 +31,7 @@ Open second terminal tab and run next commands.
 ```sh
 $ cd frontend
 $ npm install
-$ npm run
+$ npm start
 ```
 Frontend should automatically start in browser on localhost port 3000. If not just open browser on locahost port 3000.
 

@@ -42,6 +42,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SEARCH_INPUT : return searchInput(state, action);
         case actionTypes.ERROR : return error(state, action);
         case actionTypes.TOOGLE : return toogle(state);
+        default:
     }
     return state;
 };
