@@ -7,31 +7,41 @@ const initialState = {
     error: {}
 }
 
+const search = (state, action) => {
+    return {
+        ...state,
+        searchResult: action.searchResult,
+        error: {}
+    }
+};
+
+const searchInput = (state, action) => {
+    return {
+        ...state,
+        searchParam: action.searchParam
+    }
+};
+
+const error = (state, action) => {
+    return {
+        ...state,
+        error: action.searchResult
+    }
+};
+
+const toogle = (state) => {
+    return {
+        ...state,
+        searchWithPost: !state.searchWithPost
+    }
+};
+
 const reducer = (state = initialState, action) => {
-    if (action.type === actionTypes.SEARCH) {
-        return {
-            ...state,
-            searchResult: action.searchResult,
-            error: {}
-        }
-    }
-    if (action.type === actionTypes.SEARCH_INPUT) {
-        return {
-            ...state,
-            searchParam: action.searchParam
-        }
-    }
-    if (action.type === actionTypes.ERROR) {
-        return {
-            ...state,
-            error: action.searchResult
-        }
-    }
-    if (action.type === actionTypes.TOOGLE) {
-        return {
-            ...state,
-            searchWithPost: !state.searchWithPost
-        }
+    switch( action.type ) {
+        case actionTypes.SEARCH : return search(state, action);
+        case actionTypes.SEARCH_INPUT : return searchInput(state, action);
+        case actionTypes.ERROR : return error(state, action);
+        case actionTypes.TOOGLE : return toogle(state);
     }
     return state;
 };
