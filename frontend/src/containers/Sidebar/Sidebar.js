@@ -36,7 +36,7 @@ class Sidebar extends Component {
     }
 
     return (
-      <div className="Sidebar">
+      <div className="sidebar">
         <h3>Previous searches:</h3>
         {previousSearches}
       </div>

@@ -1,0 +1,8 @@
+.search-bar {
+    display: flex;
+    margin: 0 10%;
+}
+
+.search-bar > form {
+    flex: 1 1 0;
+}

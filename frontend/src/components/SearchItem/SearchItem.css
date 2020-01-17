@@ -1,0 +1,8 @@
+.search-item {
+    padding: 10px;
+    margin: 2px 0;
+}
+
+.post-toggle > .MuiFormGroup-row {
+    justify-content: center;
+}

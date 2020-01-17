@@ -1,13 +1,14 @@
 import React from 'react';
+import Link from '@material-ui/core/Link';
 
 import './SearchItem.css';
 
-const listItem = ( props ) => {
+const searchItem = ( props ) => {
     return (
-        <div className="ListItem">
-            <a href={props.url} target="_blank" rel="noopener noreferrer">{props.title}</a>
+        <div className="search-item">
+            <Link href={props.url} target="_blank" rel="noopener noreferrer">{props.title}</Link>
         </div>
     );
 };
 
-export default listItem;
+export default searchItem;

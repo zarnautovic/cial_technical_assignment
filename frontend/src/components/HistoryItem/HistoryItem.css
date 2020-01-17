@@ -1,0 +1,7 @@
+.history-item {
+    padding: 5px 0;
+}
+
+.history-item > a {
+    cursor: pointer;
+}

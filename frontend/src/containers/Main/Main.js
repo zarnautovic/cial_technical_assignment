@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import ListItem from '../../components/SearchItem/SearchItem';
+import SearchListItem from '../../components/SearchItem/SearchItem';
 import Search from '../Search/Search';
 import Sidebar from '../Sidebar/Sidebar';
 import { storeResponse } from '../../store/actions/actions';
@@ -18,7 +18,7 @@ class App extends Component {
         searchItems = (
           <div>
             {this.props.searchResult.map((searchResult, index) => {
-              return <ListItem
+              return <SearchListItem
                 url={searchResult.url}
                 title={searchResult.title}
                 key={index}
@@ -28,14 +28,18 @@ class App extends Component {
         );
       }
       return (
-        <div className="App">
+        <div className="app">
           <h1> Cial technical assignement.</h1>
           {this.props.error? <p>{this.props.error.message}</p> : ''}
-          <Search
-            search={this.searchTerm}
-          />
-          {searchItems}
-          <Sidebar/>
+          <div className="content-wrapper">
+            <div className="main-content">
+              <Search
+                search={this.searchTerm}
+              />
+              {searchItems}
+            </div>
+            <Sidebar/>
+          </div>
         </div>
       );
     };
