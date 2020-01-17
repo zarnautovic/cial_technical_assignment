@@ -30,7 +30,6 @@ class App extends Component {
       return (
         <div className="app">
           <h1> Cial technical assignement.</h1>
-          {this.props.error? <p>{this.props.error.message}</p> : ''}
           <div className="content-wrapper">
             <div className="main-content">
               <Search
@@ -49,7 +48,6 @@ class App extends Component {
     return {
       searchResult: state.search.searchResult,
       searchHistory: state.history.searchHistory,
-      error: state.search.error
     };
   };
   

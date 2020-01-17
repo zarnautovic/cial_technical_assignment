@@ -33,7 +33,6 @@ export const storeResponse = (searchParam, searchWithPost) => {
                 dispatch(saveSearchParam(searchParam));
             }  catch(error) {
                 const { data } = error.response;
-                console.log(data);
                 dispatch(search(data, ERROR));
             }
             

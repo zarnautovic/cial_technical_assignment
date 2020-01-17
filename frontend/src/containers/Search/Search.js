@@ -39,6 +39,28 @@ class Search extends Component {
     }
 
     render() {
+        let textField = (
+            <TextField
+                    id="search"
+                    label="Search..."
+                    fullWidth
+                    value={this.props.searchParam}
+                    onChange={this.inputChange}
+                />
+        );
+        if (Object.keys(this.props.error).length != 0) {
+            textField = (
+                <TextField
+                    error
+                    id="standard-error-helper-text"
+                    label="Search..."
+                    helperText={this.props.error.message}
+                    fullWidth
+                    value={this.props.searchParam}
+                    onChange={this.inputChange}
+                />
+            );
+        }
         return (
             <div className="search">
                 <div className="post-toggle">
@@ -58,13 +80,7 @@ class Search extends Component {
                 <br></br>
                 <div className="search-bar">
                     <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
-                        <TextField
-                            id="search"
-                            label="Search..."
-                            fullWidth
-                            value={this.props.searchParam}
-                            onChange={this.inputChange}
-                        />
+                        {textField}
                     </form>
                     <Button color="primary" onClick={this.search}>Search</Button>
                 </div>
@@ -76,7 +92,8 @@ class Search extends Component {
 const mapStateToProps = state => {
     return {
         searchParam: state.search.searchParam,
-        searchWithPost: state.search.searchWithPost
+        searchWithPost: state.search.searchWithPost,
+        error: state.search.error
     };
 };
 

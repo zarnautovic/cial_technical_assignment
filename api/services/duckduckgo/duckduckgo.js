@@ -14,7 +14,6 @@ const getSearchResults = async (searchParam) => {
     const searchResult = await axios.get(searchUrl);
     return searchResult.data.RelatedTopics;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 };
